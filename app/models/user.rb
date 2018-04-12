@@ -21,4 +21,8 @@ class User < ApplicationRecord
   def quit!(job)
     favorite_jobs.delete(job)
   end
+
+  def admin?
+    is_admin
+  end
 end

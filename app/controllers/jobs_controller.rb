@@ -35,14 +35,15 @@ class JobsController < ApplicationController
   def search
     if @q.present?
       search_result = Job.ransack(@search_criteria).result(distinct: true)
-      @jobs = search_result.published.random3
+      @jobs = search_result.published.paginate(page: params[:page], per_page: 8)
+      @recommonded = Job.published.random3
     end
   end
 
   protected
 
   def validate_search_key
-    @q = params[:q].gsub(/\\|\'|\/|\?/, "") if params(:q).present?
+    @q = params[:q].gsub(/\\|\'|\/|\?/, "") if params[:q].present?
     @search_criteria = search_criteria(@q)
   end
 

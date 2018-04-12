@@ -34,11 +34,11 @@
                               </a>
                               <ul class="dropdown-menu">
                                 <% if current_user.admin? %>
-                                  <li> <%= link_to("HR专区", admin_jobs_path) %> </li>
+                                  <li> <%= link_to("HR专区", "") %> </li>
                                   <li class="divider"> </li>
                                 <% end %>
-                                  <li> <%= link_to("收藏", account_collections_path) %> </li>
-                                  <li> <%= link_to("投递历史", account_resumes_path) %> </li>
+                                  <li> <%= link_to("收藏", "account_collections_path") %> </li>
+                                  <li> <%= link_to("投递历史", "account_resumes_path") %> </li>
                                   <li class="divider" role="separator"></li>
                                   <li> <%= link_to("退出", destroy_user_session_path, method: :delete) %> </li>
                               </ul>
