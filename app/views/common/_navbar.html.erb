@@ -48,7 +48,7 @@
                       <!--=== 搜索栏 ===-->
                       <%= form_tag search_jobs_path, :method => :get, class: "navbar-form navbar-right" do %>
                         <div class="input-group search-box">
-                          <input type="text" class="form-control" name="keyword" placeholder="搜索职位、公司或地点" value="<%= params[:q] %>">
+                          <input type="text" class="form-control" name="q" placeholder="搜索职位、公司或地点" value="<%= params[:q] %>">
                           <div class="input-group-btn">
                             <button class="btn btn-default" type="submit">
                               <i class="fa fa-search"></i>
