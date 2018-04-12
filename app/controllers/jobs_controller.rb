@@ -7,7 +7,7 @@ class JobsController < ApplicationController
   end
 
   def show
-    @job = Job.find(params([:id]))
+    @job = Job.find(params[:id])
     @category = @job.category
     @similarity = Job.where(is_hidden: false, category: @job.category).where.not(id: @job.id).random3
     @resumes = Resume.where(job: @job, user: current_user)

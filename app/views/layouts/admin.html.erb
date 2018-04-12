@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>win-win - 招聘专区</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="shortcut icon" href="／">
+  </head>
+
+  <body>
+    <div class="container-fluid admin-content">
+        <%= render "common/navbar" %>
+        <%= render "common/flashes" %>
+        <div class="row">
+          <div class="col-md-2 nav-sidebar">
+            <ul class="list-unstyled">
+               <li><%= link_to admin_jobs_path do %> <sapn class="fa fa-vcard-o"></sapn> <span>职位管理</span><% end %></li>
+            </ul>
+          </div>
+          <div class="col-md-10">
+            <%= yield %>
+          </div>
+       </div>
+    </div>
+    <%= render "common/footer" %>
+  </body>
+</html>
