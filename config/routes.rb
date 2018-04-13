@@ -26,5 +26,9 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :account do
+    resources :favorites
+    resources :resumes
+  end
 
 end
