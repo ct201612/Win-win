@@ -1,5 +1,5 @@
 <div class="col-md-10 col-md-offset-1 job-content">
-  <% if current_user.admin? %>
+  <% if current_user && current_user.admin? %>
       <%= link_to(content_tag(:i, " HR专区", class: "fa fa-reply-all"), admin_jobs_path) %>
   <% end %>
 
