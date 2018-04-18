@@ -38,6 +38,7 @@ gem 'font-awesome-rails'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'ransack'
+gem 'pg'
 
 
 group :development, :test do
