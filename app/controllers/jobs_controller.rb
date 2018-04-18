@@ -3,7 +3,19 @@ class JobsController < ApplicationController
   before_action :validate_search_key, only: [:search]
 
   def index
-    @jobs = Job.published.recent.paginate(page: params[:page], per_page: 8)
+    # 筛选职位类型 #
+    if params[:category].present?
+      @category = params[:category]
+      if @category == '所有类型'
+        @jobs = Job.published.recent.paginate(page: params[:page], per_page: 8)
+      else
+        @jobs = Job.where(is_hidden: false, category: @category).recent.paginate(page: params[:page], per_page: 8)
+      end
+
+    # 预设显示所有公开职位 #
+    else
+      @jobs = Job.published.recent.paginate(page: params[:page], per_page: 8)
+    end
   end
 
   def show

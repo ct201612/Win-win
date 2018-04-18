@@ -1,45 +1,51 @@
 <% if @resumes.length > 0 %>
-  <div class="col-md-10 col-md-offset-1 page-title">
-    <h1><sapn class="fa fa-envelope-o"></sapn> 投递过的职位</h1>
-  </div>
+
   <div class="col-md-10 col-md-offset-1 job-content">
+    <sapn>已投递的职位</sapn>
     <div class="main-box">
     <% @resumes.each do |resume| %>
     <div class="col-md-9 col-xs-12 job-box">
-      <!--=== 职位信息 ===-->
-      <div class="col-md-6 col-xs-12 info">
-        <div class="info-top">
-          <h3><%= link_to(resume.job.name, job_path(resume.job), target: "_blank" )%></h3><span><%= resume.job.created_at.strftime("%Y-%m-%d") %></span>
-        </div>
-        <div class="info-mid">
-          <%= resume.job.wage_lower_bound %> k ~ <%= resume.job.wage_upper_bound %> k
-        </div>
-        <div class="info-bot">
-          <span class="category"><span class="<%= render_job_category(resume.job) %>"> <%= resume.job.category %></span>
-        </div>
-      </div>
 
-      <!--=== 公司信息 ===-->
-      <div class="col-md-6 col-xs-12 company">
-        <div class="company-top">
-          <span><%= link_to(resume.job.company, job_path(resume.job))%></span>
-          <% if current_user && current_user.is_member_of?(resume.job) %>
-            <%= link_to remove_job_path(resume.job), method: :post do %>
-              <sapn class="fa fa-star"></sapn>
-            <% end %>
-          <% else %>
-            <%= link_to add_job_path(resume.job), method: :post do %>
-              <sapn class="fa fa-star-o"></sapn>
-            <% end %>
-          <% end %>
+      <div class="container-fluid">
+        <h3>
+          <span><%= link_to(resume.job.name, job_path(resume.job), target: "_blank" )%></span>
+
+                <% if current_user && current_user.is_member_of?(resume.job) %>
+
+                    <%= link_to remove_job_path(resume.job), method: :post do %>
+                      <sapn class="fa fa-star"></sapn>
+                    <% end %>
+                  <% else %>
+                    <%= link_to add_job_path(resume.job), method: :post do %>
+                      <sapn class="fa fa-star-o"></sapn>
+                    <% end %>
+                  <% end %>
+        </h3>
+        <div class="row">
+           <div class="col-md-6 info-mid">
+             <span>月薪: <%= resume.job.wage_lower_bound %>k ~ <%= resume.job.wage_upper_bound %>k </span>
+           </div>
+           <div class="col-md-6">
+             <span class="<%= render_job_category(resume.job) %>"> <%= resume.job.category %></span>
+           </div>
         </div>
-        <div class="company-mid">
-          <sapn class="fa fa-envelope"></sapn><span><%= resume.job.contact_email %></span>
-        </div>
-        <div class="company-bot">
-          <sapn class="fa fa-map-marker"></sapn><span><%= resume.job.location %></span>
-        </div>
-      </div>
+
+         <div class="row">
+           <div class="col-md-3 col-sm-6">
+             <span><i class="fa fa-user-circle-o" aria-hidden="true"></i>  <%= resume.job.company %></span>
+           </div>
+           <div class="col-md-3 col-sm-6">
+             <sapn class="fa fa-map-marker"> <%= resume.job.location %></sapn>
+           </div>
+           <div class="col-md-3 col-sm-6">
+             <span><i class="fa fa-clock-o" aria-hidden="true"></i>  <%= time_ago_in_words(resume.job.created_at) %> ago</span>
+           </div>
+           <div class="col-md-3 col-sm-6">
+             <span><i class="fa fa-envelope" aria-hidden="true"></i>  <%= resume.job.contact_email %></span>
+           </div>
+         </div>
+       </div>
+
     </div>
 
 

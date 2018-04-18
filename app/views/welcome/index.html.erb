@@ -1,0 +1,202 @@
+<body data-spy="scroll" data-target=".nav-top">
+    <!--======== header =========-->
+
+    <!--======== end header =========-->
+
+    <!--======== intro =========-->
+    <section class="intro">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                <div class="intro-content">
+                    <h1>win-win  迎接美好人生</h1>
+                    <div><i class="fa fa-caret-down"></i></div>
+                    <a class="btn btn-primary-welcome" href="jobs" role="button">立即开始</a></a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--======== end intro =========-->
+
+    <!--======== Our Services =========-->
+    <section id="service" class="what-we-do">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <h2 class="section-title">为什么选 win-win? </h2>
+                    <hr />
+                </div>
+            </div>
+            <div class="col-md-10 col-md-offset-1">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="do-box">
+                        <i class="fa fa-4x fa-industry"></i>
+                        <h3>顶尖企业</h3>
+                        <p>1000+ 公司进驻 win-win，只等你来</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="do-box">
+                        <i class="fa fa-4x fa-phone-square"></i>
+                        <h3>快速反馈</h3>
+                        <p>一周内你能获得10-20个面试邀请。</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="do-box">
+                        <i class="fa fa-4x fa-tasks"></i>
+                        <h3>更高效率</h3>
+                        <p>只要一个点击，搜索，你将得到你想要的。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--======== end Our Services =========-->
+
+    <!--======== our Genius =========-->
+    <section id="genius" class="our-experts">
+        <div class="container">
+            <div class="row">
+              <div class="row">
+                  <div class="col-md-6 col-md-offset-3 text-center">
+                      <h2 class="section-title">热门职业</h2>
+                      <hr />
+                  </div>
+              </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-sm-3">
+                          <%= link_to jobs_path(:category => "技术") do %>
+                            <div class="expert-box thumbnail">
+                                <%= image_tag("category_1.png") %>
+                                <div class="text-center caption">
+                                    <h3 class="expert-name">技术</h3>
+                                </div>
+                            </div>
+                          <% end %>
+                        </div>
+                        <div class="col-sm-3">
+                          <%= link_to jobs_path(:category => "财务") do %>
+                            <div class="expert-box thumbnail">
+                                <%= image_tag("category_2.png") %>
+                                <div class="text-center caption">
+                                    <h3 class="expert-name">财务</h3>
+                                </div>
+                            </div>
+                          <% end %>
+                        </div>
+                        <div class="col-sm-3">
+                          <%= link_to jobs_path(:category => "设计") do %>
+                            <div class="expert-box thumbnail">
+                                <%= image_tag("category_3.png") %>
+                                <div class="text-center caption">
+                                    <h3 class="expert-name">设计</h3>
+                                </div>
+                            </div>
+                          <% end %>
+                        </div>
+                        <div class="col-sm-3">
+                          <%= link_to jobs_path(:category => "运营") do %>
+                            <div class="expert-box thumbnail">
+                                <%= image_tag("category_4.png") %>
+                                <div class="text-center caption">
+                                    <h3 class="expert-name">运营</h3>
+                                </div>
+                            </div>
+                          <% end %>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                      <%= link_to jobs_path(:category => "市场") do %>
+                        <div class="col-sm-3">
+                            <div class="expert-box thumbnail">
+                                <%= image_tag("category_5.png") %>
+                                <div class="text-center caption">
+                                    <h3 class="expert-name">市场</h3>
+                                </div>
+                            </div>
+                          <% end %>
+                        </div>
+                        <div class="col-sm-3">
+                          <%= link_to jobs_path(:category => "销售") do %>
+                            <div class="expert-box thumbnail">
+                                <%= image_tag("category_6.png") %>
+                                <div class="text-center caption">
+                                    <h3 class="expert-name">销售</h3>
+                                </div>
+                            </div>
+                          <% end %>
+                        </div>
+                        <div class="col-sm-3">
+                          <%= link_to jobs_path(:category => "客服") do %>
+                            <div class="expert-box thumbnail">
+                                <%= image_tag("category_7.png") %>
+                                <div class="text-center caption">
+                                    <h3 class="expert-name">客服</h3>
+                                </div>
+                            </div>
+                          <% end %>
+                        </div>
+                        <div class="col-sm-3">
+                          <%= link_to jobs_path(:category => "所有类型") do %>
+                            <div class="expert-box thumbnail">
+                                <%= image_tag("category_8.png") %>
+                                <div class="text-center caption">
+                                    <h3 class="expert-name">所有类型</h3>
+                                </div>
+                            </div>
+                          <% end %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--======== end our Genius =========-->
+
+    <!--======== Testimonials =========-->
+    <section id="testimonial" class="talk-about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-xs-12 text-center">
+                    <h2 class="section-title">用户反馈</h2>
+                    <!-- <div class="border"><span class="border-l-r"><i class="fa fa-quote-right"></i></span></div> -->
+
+                    <div id="talk-about-us" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#talk-about-us" data-slide-to="0" class="active"></li>
+                            <li data-target="#talk-about-us" data-slide-to="1"></li>
+                            <li data-target="#talk-about-us" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <p>win-win很神奇，我只用一周的时间，得到梦寐以求的工作。</p>
+                                <%= image_tag("user_1.png") %>
+                                <strong>Kevin, UI设计师</strong>
+                            </div>
+                            <div class="item">
+                                <p>你的工资合理吗？大boss知道你的价值么？在这里，你将得到你应得的。</p>
+                                <%= image_tag("user_2.png") %>
+                                <strong>Jessy Roy, 全栈工程师 </strong>
+                            </div>
+                            <div class="item">
+                                <p>我曾与不同的人工作，这总是让我感到难受；直到我遇到win-win，这是一种幸运。</p>
+                                <%= image_tag("user_3.jpg") %>
+                                <strong>Jessy Roy, CEO </strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--======== End Testimonial =========-->
+    <!-- <br /><br /><br /> -->
+    <div class="text-center">
+      <a class="btn btn-default-welcome" href="jobs" role="button">立即开始</a></a>
+    </div>
+    <br /><br /><br />
+
+</body>

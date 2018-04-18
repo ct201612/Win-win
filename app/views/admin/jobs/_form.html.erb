@@ -8,9 +8,9 @@
         <hr />
         <!--=== 职位类型 ===-->
         <% if @job.category? %>
-          <%= f.input :category, :label => "职位类型", :collection => ["技术", "财务", "设计", "运营", "市场", "销售", "其他"], :checked => @job.category, input_html: { class: 'category' } %>
+          <%= f.input :category, :label => "职位类型", :collection => ["技术", "财务", "设计", "运营", "市场", "销售", "客服", "其他"], :checked => @job.category, input_html: { class: 'category' } %>
         <% else %>
-          <%= f.input :category, :label => "职位类型", :collection => ["技术", "财务", "设计", "运营", "市场", "销售", "其他"], input_html: { class: 'category' } %>
+          <%= f.input :category, :label => "职位类型", :collection => ["技术", "财务", "设计", "运营", "市场", "销售", "客服", "其他"], input_html: { class: 'category' } %>
         <% end %>
         <!--=== 工作地点 ===-->
         <% if @job.location? %>
