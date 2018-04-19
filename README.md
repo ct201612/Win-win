@@ -1,24 +1,9 @@
-# README
+# Win-Win 招聘网 ＊ Beta ＊
+这是用 Ruby on Rails 框架，从零搭建的网站。
+* [Win-Win 招聘网](https://radiant-wildwood-75305.herokuapp.com/)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 功能简介：
+* 选择一般用户 / 企业用户，注册帐号
+* 搜索 / 收藏职位，投递简历
+* 查看收藏 / 投递历史，随机推荐相似职位（公开职位）
+* 工作管理员，可新增、修改、删除、公开/隐藏职位、浏览简历清单 / 下载简历
