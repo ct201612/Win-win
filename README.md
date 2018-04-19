@@ -1,4 +1,4 @@
-# Win-Win 招聘网 ＊Beta＊
+# Win-Win 招聘网 Beta
 这是用 Ruby on Rails 框架，从零搭建的网站。
 * [Win-Win 招聘网](https://radiant-wildwood-75305.herokuapp.com/)
 
